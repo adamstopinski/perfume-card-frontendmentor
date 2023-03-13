@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Custom properties */
+
+:root {
+	--clr-darkCyan: #3c8067;
+	--clr-cream: #f2ebe3;
+	--clr-darkBlue: #1c232b;
+	--clr-grayBlue: #6c7289;
+	--clr-white: #ffffff;
+
+	--ff-frau: 'Fraunces', serif;
+	--ff-mont: 'Montserrat', sans-serif;
+
+	--fw-reg: 500;
+	--fw-bold: 700;
+
+	--fs-p: 1.4rem;
+}
+
+html {
+	font-size: 62.5%;
+}
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--clr-cream);
+}
+
+
+
+
+// MOBILE CARD
+.card {
+	position: relative;
+	width: 250px;
+	height: 500px;
+	background-color: var(--clr-white);
+	border-radius: 8px;
+	overflow: hidden;
+
+	&__img-mobile {
+		width: 100%;
+	}
+
+	&__text {
+		padding: 15px 20px;
+
+		&-perfume {
+			color: var(--clr-grayBlue);
+			font-size: 0.8rem;
+			font-family: var(--ff-mont);
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			margin-bottom: 8px;
+		}
+
+		&-title {
+			line-height: 1em;
+			font-family: var(--ff-frau);
+			font-weight: var(--fw-bold);
+			margin-bottom: 0.6em;
+		}
+
+		&-describe {
+			font-size: 1rem;
+			font-family: var(--ff-mont);
+			color: var(--clr-grayBlue);
+			line-height: 1.5em;
+		}
+	}
+
+	&__price {
+		display: flex;
+		margin: .5em 2em;
+
+		&-promotion {
+			font-size: 1.9rem;
+			font-family: var(--ff-frau);
+			color: var(--clr-darkCyan);
+		}
+
+		&-before {
+			align-self: center;
+			color: var(--clr-grayBlue);
+			margin-left: 1.5em;
+			text-decoration: line-through;
+			font-family: var(--ff-mont);
+		}
+	}
+
+	&__btn {
+		width: 80%;
+	}
+}
+
+
+
+.footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	padding: 10px 10px;
+
+	&__links {
+		text-decoration: none;
+		font-weight: var(--fw-bold);
+	}
+}
