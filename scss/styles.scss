@@ -20,8 +20,6 @@
 
 	--fw-reg: 500;
 	--fw-bold: 700;
-
-	--fs-p: 1.4rem;
 }
 
 html {
@@ -32,85 +30,101 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
 	background-color: var(--clr-cream);
 }
 
+// CARD MOBILE
 
-
-
-// MOBILE CARD
 .card {
-	position: relative;
-	width: 250px;
-	height: 500px;
-	background-color: var(--clr-white);
+	width: 90vw;
+	height: 90vh;
 	border-radius: 8px;
+	background-color: var(--clr-white);
+	display: flex;
+	flex-direction: column;
 	overflow: hidden;
 
 	&__img-mobile {
 		width: 100%;
 	}
+	&__img-desktop {
+		display: none;
+	}
 
 	&__text {
-		padding: 15px 20px;
+		padding: 2em;
 
 		&-perfume {
+			padding: 0em 0em 1em;
 			color: var(--clr-grayBlue);
-			font-size: 0.8rem;
+			font-size: 1rem;
 			font-family: var(--ff-mont);
+			font-weight: var(--fw-bold);
 			text-transform: uppercase;
-			letter-spacing: 3px;
-			margin-bottom: 8px;
+			letter-spacing: 0.5em;
 		}
 
 		&-title {
-			line-height: 1em;
+			padding: 0em 0em .5em;
+			font-size: 2.8rem;
 			font-family: var(--ff-frau);
-			font-weight: var(--fw-bold);
-			margin-bottom: 0.6em;
+			line-height: 1em;
 		}
 
 		&-describe {
-			font-size: 1rem;
-			font-family: var(--ff-mont);
 			color: var(--clr-grayBlue);
-			line-height: 1.5em;
+			font-size: 1.42rem;
+			font-family: var(--ff-mont);
+			line-height: 1.6em;
 		}
 	}
 
 	&__price {
 		display: flex;
-		margin: .5em 2em;
+		padding: 1em 2em 2em;
 
-		&-promotion {
-			font-size: 1.9rem;
-			font-family: var(--ff-frau);
+		&-promo {
+			
 			color: var(--clr-darkCyan);
+			font-size: 3rem;
+			font-family: var(--ff-frau);
 		}
 
 		&-before {
-			align-self: center;
+			font-size: 1.2rem;
+			margin-left: 2em;
 			color: var(--clr-grayBlue);
-			margin-left: 1.5em;
-			text-decoration: line-through;
 			font-family: var(--ff-mont);
+			align-self: center;
+			text-decoration: line-through;
+			text-decoration-color: var(--clr-grayBlue);
 		}
 	}
 
 	&__btn {
-		width: 80%;
+		padding: 1em 0;
+		margin: 0 auto;
+		width: 90%;
+		color: var(--clr-white);
+		border: none;
+		border-radius: 8px;
+		background-color: var(--clr-darkCyan);
+
+		&-text {
+			margin-left: 1em;
+			font-family: var(--ff-mont);
+			font-weight: var(--fw-bold);
+			letter-spacing: .08em;
+		}
 	}
 }
-
-
 
 .footer {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
 	text-align: center;
-	padding: 10px 10px;
+	padding: 1em;
 
 	&__links {
 		text-decoration: none;

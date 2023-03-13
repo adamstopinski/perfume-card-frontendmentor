@@ -17,7 +17,6 @@
   --ff-mont: "Montserrat", sans-serif;
   --fw-reg: 500;
   --fw-bold: 700;
-  --fs-p: 1.4rem;
 }
 
 html {
@@ -29,62 +28,80 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   background-color: var(--clr-cream);
 }
 
 .card {
-  position: relative;
-  width: 250px;
-  height: 500px;
-  background-color: var(--clr-white);
+  width: 90vw;
+  height: 90vh;
   border-radius: 8px;
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 .card__img-mobile {
   width: 100%;
 }
+.card__img-desktop {
+  display: none;
+}
 .card__text {
-  padding: 15px 20px;
+  padding: 2em;
 }
 .card__text-perfume {
+  padding: 0em 0em 1em;
   color: var(--clr-grayBlue);
-  font-size: 0.8rem;
-  font-family: var(--ff-mont);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 8px;
-}
-.card__text-title {
-  line-height: 1em;
-  font-family: var(--ff-frau);
-  font-weight: var(--fw-bold);
-  margin-bottom: 0.6em;
-}
-.card__text-describe {
   font-size: 1rem;
   font-family: var(--ff-mont);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+.card__text-title {
+  padding: 0em 0em 0.5em;
+  font-size: 2.8rem;
+  font-family: var(--ff-frau);
+  line-height: 1em;
+}
+.card__text-describe {
   color: var(--clr-grayBlue);
-  line-height: 1.5em;
+  font-size: 1.42rem;
+  font-family: var(--ff-mont);
+  line-height: 1.6em;
 }
 .card__price {
   display: flex;
-  margin: 0.5em 2em;
+  padding: 1em 2em 2em;
 }
-.card__price-promotion {
-  font-size: 1.9rem;
-  font-family: var(--ff-frau);
+.card__price-promo {
   color: var(--clr-darkCyan);
+  font-size: 3rem;
+  font-family: var(--ff-frau);
 }
 .card__price-before {
-  align-self: center;
+  font-size: 1.2rem;
+  margin-left: 2em;
   color: var(--clr-grayBlue);
-  margin-left: 1.5em;
-  text-decoration: line-through;
   font-family: var(--ff-mont);
+  align-self: center;
+  text-decoration: line-through;
+  text-decoration-color: var(--clr-grayBlue);
 }
 .card__btn {
-  width: 80%;
+  padding: 1em 0;
+  margin: 0 auto;
+  width: 90%;
+  color: var(--clr-white);
+  border: none;
+  border-radius: 8px;
+  background-color: var(--clr-darkCyan);
+}
+.card__btn-text {
+  margin-left: 1em;
+  font-family: var(--ff-mont);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.08em;
 }
 
 .footer {
@@ -92,7 +109,7 @@ body {
   width: 100%;
   bottom: 0;
   text-align: center;
-  padding: 10px 10px;
+  padding: 1em;
 }
 .footer__links {
   text-decoration: none;
