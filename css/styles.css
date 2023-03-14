@@ -31,79 +31,155 @@ body {
   background-color: var(--clr-cream);
 }
 
-.card {
-  width: 90vw;
-  height: 90vh;
-  border-radius: 8px;
-  background-color: var(--clr-white);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+@media (max-width: 1439px) {
+  .card {
+    max-width: 340px;
+    height: 600px;
+    border-radius: 8px;
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .card__img-mobile {
+    width: 100%;
+  }
+  .card__img-desktop {
+    display: none;
+  }
+  .card__body {
+    padding: 2em;
+  }
+  .card__body-text-perfume {
+    padding: 0em 0em 1em;
+    color: var(--clr-grayBlue);
+    font-size: 1rem;
+    font-family: var(--ff-mont);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  .card__body-text-title {
+    padding: 0em 0em 0.5em;
+    font-size: 2.8rem;
+    font-family: var(--ff-frau);
+    line-height: 1em;
+  }
+  .card__body-text-describe {
+    margin: 0 0 2em;
+    font-size: 1.42rem;
+    font-family: var(--ff-mont);
+    line-height: 1.6em;
+    color: var(--clr-grayBlue);
+  }
+  .card__body-price {
+    display: flex;
+  }
+  .card__body-price-promo {
+    font-size: 3rem;
+    font-family: var(--ff-frau);
+    color: var(--clr-darkCyan);
+  }
+  .card__body-price-before {
+    margin-left: 2em;
+    font-size: 1.2rem;
+    font-family: var(--ff-mont);
+    color: var(--clr-grayBlue);
+    align-self: center;
+    text-decoration: line-through;
+    text-decoration-color: var(--clr-grayBlue);
+  }
+  .card__body-btn {
+    padding: 1em 0;
+    margin: 2em auto 1em;
+    width: 90%;
+    color: var(--clr-white);
+    border: none;
+    border-radius: 8px;
+    background-color: var(--clr-darkCyan);
+  }
+  .card__body-btn--text {
+    margin-left: 1em;
+    font-family: var(--ff-mont);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.08em;
+  }
 }
-.card__img-mobile {
-  width: 100%;
+@media (min-width: 1440px) {
+  .card {
+    display: flex;
+    width: 600px;
+    height: 452px;
+    border-radius: 8px;
+    background-color: var(--clr-white);
+    overflow: hidden;
+  }
+  .card__img-mobile {
+    display: none;
+  }
+  .card__img-desktop {
+    width: 100%;
+    height: 100%;
+  }
+  .card__body {
+    padding: 3em;
+    width: 50%;
+  }
+  .card__body-text-perfume {
+    padding: 0em 0em 2.5em;
+    color: var(--clr-grayBlue);
+    font-size: 1rem;
+    font-family: var(--ff-mont);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  .card__body-text-title {
+    padding: 0em 0em 1em;
+    font-size: 3.2rem;
+    font-family: var(--ff-frau);
+    line-height: 1em;
+  }
+  .card__body-text-describe {
+    margin: 0 0 2em;
+    font-size: 1.42rem;
+    font-family: var(--ff-mont);
+    line-height: 1.6em;
+    color: var(--clr-grayBlue);
+  }
+  .card__body-price {
+    display: flex;
+  }
+  .card__body-price-promo {
+    font-size: 3rem;
+    font-family: var(--ff-frau);
+    color: var(--clr-darkCyan);
+  }
+  .card__body-price-before {
+    margin-left: 3em;
+    font-size: 1.2rem;
+    font-family: var(--ff-mont);
+    color: var(--clr-grayBlue);
+    align-self: center;
+    text-decoration: line-through;
+    text-decoration-color: var(--clr-grayBlue);
+  }
+  .card__body-btn {
+    padding: 1em 0;
+    margin: 2em auto 1em;
+    width: 100%;
+    color: var(--clr-white);
+    border: none;
+    border-radius: 8px;
+    background-color: var(--clr-darkCyan);
+  }
+  .card__body-btn--text {
+    margin-left: 1em;
+    font-family: var(--ff-mont);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.08em;
+  }
 }
-.card__img-desktop {
-  display: none;
-}
-.card__text {
-  padding: 2em;
-}
-.card__text-perfume {
-  padding: 0em 0em 1em;
-  color: var(--clr-grayBlue);
-  font-size: 1rem;
-  font-family: var(--ff-mont);
-  font-weight: var(--fw-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-}
-.card__text-title {
-  padding: 0em 0em 0.5em;
-  font-size: 2.8rem;
-  font-family: var(--ff-frau);
-  line-height: 1em;
-}
-.card__text-describe {
-  color: var(--clr-grayBlue);
-  font-size: 1.42rem;
-  font-family: var(--ff-mont);
-  line-height: 1.6em;
-}
-.card__price {
-  display: flex;
-  padding: 1em 2em 2em;
-}
-.card__price-promo {
-  color: var(--clr-darkCyan);
-  font-size: 3rem;
-  font-family: var(--ff-frau);
-}
-.card__price-before {
-  font-size: 1.2rem;
-  margin-left: 2em;
-  color: var(--clr-grayBlue);
-  font-family: var(--ff-mont);
-  align-self: center;
-  text-decoration: line-through;
-  text-decoration-color: var(--clr-grayBlue);
-}
-.card__btn {
-  padding: 1em 0;
-  margin: 0 auto;
-  width: 90%;
-  color: var(--clr-white);
-  border: none;
-  border-radius: 8px;
-  background-color: var(--clr-darkCyan);
-}
-.card__btn-text {
-  margin-left: 1em;
-  font-family: var(--ff-mont);
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.08em;
-}
-
 .footer {
   position: absolute;
   width: 100%;
